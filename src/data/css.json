@@ -16,8 +16,12 @@
         "link": "https://habr.com/ru/post/499370/"
       },
       {
-        "title": "",
-        "link": ""
+        "title": "Вопросы по CSS",
+        "link": "https://github.com/FedorovAlexander/Front-end-Job-Interview-Questions/blob/master/CSS/README.md"
+      },
+      {
+        "title": "EM, PX, PT, CM, IN…",
+        "link": "https://www.w3.org/Style/Examples/007/units.ru.html"
       },
       {
         "title": "",
@@ -26,11 +30,7 @@
       {
         "title": "",
         "link": ""
-      },
-      {
-        "title": "",
-        "link": ""
-      },
+      }
     ]
   },
   "data": [
@@ -56,7 +56,8 @@
     },
     {
       "description": "Каким способом я могу установить свойство opacity для элемента button, у которого есть атрибут disabled?",
-      "type": "radio-code",
+      "type": "radio",
+      "name": "radio-disabled",
       "options": [
         "button:disabled { opacity: 0.24; }",
         ":disabled { opacity: 0.24; }",
@@ -66,7 +67,8 @@
     },
     {
       "description": "Как я могу установить свойство opacity для элемента span, который следует прямо за элементом input?",
-      "type": "radio-code",
+      "type": "radio",
+      "name": "radio-input",
       "options": [
         "input | span { opacity: 0.24; }",
         "input > span { opacity: 0.24; }",
@@ -76,7 +78,8 @@
     },
     {
       "description": "Как можно установить свойство opacity для элемента input, у которого установлен атрибут type со значением \"radio\"?",
-      "type": "radio-code",
+      "type": "radio",
+      "name": "radio-opac-rad",
       "options": [
         "input[type=\"radio\"] { opacity: 0.24; }",
         "input[radio] { opacity: 0.24; }",
@@ -87,6 +90,7 @@
     {
       "description": "Есть фрагмент кода. Скажите сколько элементов с пурпурным фоном будет в первом и во втором случае.",
       "type": "radio",
+      "name": "radio-pur",
       "code": [
         {
           "type": "xml",
@@ -107,6 +111,7 @@
     {
       "description": "Есть фрагмент кода. Скажите сколько элементов с пурпурным фоном будет в первом и во втором случае.",
       "type": "radio",
+      "name": "radio-pur2",
       "code": [
         {
           "type": "xml",
@@ -146,11 +151,11 @@
       "code": [
         {
           "type": "xml",
-          "value": "<div class=\"parent\">\n<div class=\"child\">element 2</div>\n</div>"
+          "value": "<div class=\"parent\">\n\t<div class=\"child\">element 2</div>\n</div>"
         },
         {
           "type": "css",
-          "value": ".child {\nposition: absolute;\n}"
+          "value": ".child {\n\tposition: absolute;\n}"
         }
       ]
     },
@@ -203,6 +208,7 @@
     {
       "description": "Что делает !important?",
       "type": "radio",
+      "name": "radio-imporant",
       "options": [
         "Повышает значимость строки кода",
         "Ошибку в коде делает",
@@ -217,11 +223,11 @@
       "code": [
         {
           "type": "xml",
-          "value": "<div class=\"parent\">\n<div class=\"first-child\">element 1</div>\n<div class=\"second-child\">element 2</div>\n</div>"
+          "value": "<div class=\"parent\">\n\t<div class=\"first-child\">element 1</div>\n\t<div class=\"second-child\">element 2</div>\n</div>"
         },
         {
           "type": "css",
-          "value": ".parent {\ndisplay: flex;\nflex-direction: column;\n\n}.first-child {\nmargin-bottom: 20px;\n}\n\n.second-child {\nmargin-top: 10px;\n}"
+          "value": ".parent {\n\tdisplay: flex;\n\tflex-direction: column;\n}\n\n.first-child {\n\tmargin-bottom: 20px;\n}\n\n.second-child {\n\tmargin-top: 10px;\n}"
         }
       ]
     },
@@ -250,6 +256,7 @@
     {
       "description": "Единица измерения rem вычисляется в зависимости от значение свойства font-size элемента html. Правда или ложь?",
       "type": "radio",
+      "name": "radio-bool",
       "options": [
         "Правда",
         "Ложь"
@@ -284,6 +291,7 @@
     {
       "description": "Что делает свойство content?",
       "type": "radio",
+      "name": "radio-content",
       "options": [
         "Отображает псевдоэлемент after и before",
         "Помещает внутрь блока текст, который мы укажем в значении свойства",
@@ -329,63 +337,192 @@
     },
     {
       "description": "Расскажите про селектор по атрибутам",
-      "type": ""
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Знаете ли вы про препроцессоры? Какой используете? Какие преимущества дают препроцессоры?",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Как можно задать прозрачность цвету в css?",
+      "type": "radio",
+      "name": "radio-opacity",
+      "options": [
+        "Использовать hex палитру",
+        "transparent",
+        "background-opacity",
+        "Использовать палитру rgba"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Расскажите про различия background-size: cover и contain",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Что делает * { box-sizing: border-box; }? В чем его преимущества?",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Расскажите про @media запросы в CSS",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "В чем отличия между box-shadow и filter: drop-shadow?",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Что делает backdrop-filter?",
+      "type": "radio",
+      "name": "radio-backdrop",
+      "options": [
+        "Обнуляет все значения filter, заданные в CSS",
+        "Создает фильтры для текста",
+        "Накладывает фильтр на элемент с учетом контента под элементом"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Как подключить шрифт через font-face? Напишите код подключения шрифта Roboto с учетом otf, ttf, woff и woff2 версий",
+      "type": "code"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Предположим, нам необходимо выбрать элемент, класс которого точно содержит слово \"syntax\", но мы не знаем где именно это слово фигурирует в классе, какой из селекторов будет правильным?",
+      "type": "radio",
+      "name": "radio-syntax",
+      "options": [
+        "[class*=\"syntax\"]",
+        "[class^=\"syntax\"]",
+        "[class|=\"syntax\"]",
+        "[class$=\"syntax\"]",
+        "[class~=\"syntax\"]"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Предположим, нам необходимо выбрать элемент, класс которого заканчивается на слово city, какой из селекторов будет правильным?",
+      "type": "radio",
+      "name": "radio-city",
+      "options": [
+        "[class*=\"city\"]",
+        "[class^=\"city\"]",
+        "[class|=\"city\"]",
+        "[class$=\"city\"]",
+        "[class~=\"city\"]"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Предположим, нам необходимо выбрать элемент, класс которого начинается на слово container, какой из селекторов будет правильным?",
+      "type": "radio",
+      "name": "radio-container",
+      "options": [
+        "[class*=\"container\"]",
+        "[class^=\"container\"]",
+        "[class|=\"container\"]",
+        "[class$=\"container\"]",
+        "[class~=\"container\"]"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Предположим, нам необходимо выбрать элемент, c классами column и column-row, какой из селекторов будет правильным?",
+      "type": "radio",
+      "name": "radio-column",
+      "options": [
+        "[class*=\"column\"]",
+        ".column .column-row",
+        ".column^-row",
+        ".column.column-row"
+      ]
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Представим следующую ситуацию, мы сделали inline-block одному из элементов, но теперь он содержит какой то непонятный отступ, который мы не здавали, как от него избавиться? Пример можно посмотреть тут: https://codepen.io/dicemasters/pen/QWVKrLG",
+      "type": "text"
     },
     {
-      "description": "",
-      "type": ""
+      "description": "Что такое webp? Для чего нужен этот формат?",
+      "type": "text"
     },
+
+    {
+      "description": "Вопросы уровня - мастер",
+      "type": "separator"
+    },
+    {
+      "description": "Знаете ли вы о свойствах stroke и fill? Когда и для чего они используются?",
+      "type": "text"
+    },
+    {
+      "description": "В чем отличие сброса (reset.css) и нормализации (normalize.css)?",
+      "type": "text"
+    },
+    {
+      "description": "Расскажите про миксины в SCSS?",
+      "type": "text"
+    },
+    {
+      "description": "Сколько версий в CSS? И какая на текущий момент используется в современных браузерах?",
+      "type": "text"
+    },
+    {
+      "description": "Каковы компоненты стиля CSS?",
+      "type": "text"
+    },
+    {
+      "description": "Для чего нужен hyphens?",
+      "type": "text"
+    },
+    {
+      "description": "Для чего нужна единица измерения pc?",
+      "type": "text"
+    },
+    {
+      "description": "Для чего нужна единица измерения vmin?",
+      "type": "text"
+    },
+    {
+      "description": "Какое свойство используется для отступа абзаца?",
+      "type": "text"
+    },
+    {
+      "description": "Какой псевдокласс укажет на посещенную ссылку?",
+      "type": "radio",
+      "name": "radio-visited",
+      "options": [
+        ":readed",
+        ":visited",
+        ":opened",
+        ":visitor"
+      ]
+    },
+    {
+      "description": "Расскажите про float? Какие бывают значения этого свойтсва и для чего используется?",
+      "type": "text"
+    },
+    {
+      "description": "Что такое outline?",
+      "type": "text"
+    },
+
+    {
+      "description": "Вопросы уровня - верстка",
+      "type": "separator"
+    },
+    {
+      "description": "Сверстайте шейпы с помощью CSS и HTML, данный макет покажет уровень знания и применения инстурментов позиционирования",
+      "type": "codepen",
+      "figma": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2avDsfiKzdFGo2AicqxDri%2FUntitled%3Fnode-id%3D0%253A1%26t%3DQdN3c6Tbu40qJz27-1\" allowfullscreen></iframe>"
+    },
+    {
+      "description": "Сверстайте экран, данный макет покажет уровень вашего знания flex и градиентов",
+      "type": "codepen",
+      "figma": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FWGEJuUTANEJIEf0PBALz18%2FFlex-%25D1%2581%25D0%25BA%25D0%25B8%25D0%25BB%25D1%258B%3Fnode-id%3D0%253A1%26t%3DjDLIfeZ8NptqBERC-1\" allowfullscreen></iframe>"
+    },
+    {
+      "description": "Сверстайте данный экран и адаптируйте его под мобильные устройства, данный макет покажет уровень вашего знания media запросов",
+      "type": "codepen",
+      "figma": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F6dy0CmYUroV50o0q2XRCE0%2F%25D0%2590%25D0%25B4%25D0%25B0%25D0%25BF%25D1%2582%25D0%25B8%25D0%25B2%3Fnode-id%3D0%253A1%26t%3DOnyWdxAa4U3sP0Z4-1\" allowfullscreen></iframe>"
+    },
+    {
+      "description": "Сверстайте и создайте анимацию прокрутки для данных шейпов, данный макет покажет уровень вашего знания анимации и круговый градиентов",
+      "type": "codepen",
+      "figma": "<iframe style=\"border: 1px solid rgba(0, 0, 0, 0.1);\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGCtj4T9sy9xNKQ1LWO4LsE%2F%25D0%2590%25D0%25BD%25D0%25BC%25D0%25B8%25D0%25B0%25D1%2586%25D0%25B8%25D1%258F%3Fnode-id%3D0%253A1%26t%3Drp7nxqtmjFzsXnNQ-1\" allowfullscreen></iframe>"
+    }
   ]
 }

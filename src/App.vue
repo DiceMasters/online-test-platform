@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { RouterView } from 'vue-router'
 import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml'
+import css from 'highlight.js/lib/languages/css'
 import {
   darkTheme,
   NConfigProvider,
@@ -16,6 +17,7 @@ import {
 } from 'naive-ui'
 
 hljs.registerLanguage('javascript', xml)
+hljs.registerLanguage('javascript', css)
 
 const avatarUri = ref('https://sun2.ufanet.userapi.com/s/v1/ig2/zn4cBh-bV-lumd4N81Y7u0Ua0z-pVwoq5fc9zbiNfDoN0Awu1WX65Dy7NQzVjPMwi7Qt83JESNfuZHyQVhPvlYZF.jpg?size=200x200&quality=95&crop=76,111,282,282&ava=1')
 

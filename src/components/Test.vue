@@ -79,11 +79,22 @@ function onSubmit () {
 
       <n-card v-else :title="q.description" small>
         <template v-if="q.type === 'text'">
-          <n-input
-            v-model:value="(preparedData[index].value as string)"
-            type="textarea"
-            placeholder="Введите ответ"
-          />
+          <n-space vertical :size="12">
+            <template v-if="q.code">
+              <n-code
+                v-for="(code, index) in q.code"
+                :key="index"
+                :code="code.value"
+                :lang="code.type"
+              />
+            </template>
+
+            <n-input
+              v-model:value="(preparedData[index].value as string)"
+              type="textarea"
+              placeholder="Введите ответ"
+            />
+          </n-space>
         </template>
 
         <template v-if="q.type === 'checkbox'">
@@ -105,6 +116,15 @@ function onSubmit () {
                 :key="index"
                 :code="code"
                 lang="xml"
+              />
+            </template>
+
+            <template v-if="q.code">
+              <n-code
+                v-for="(code, index) in q.code"
+                :key="index"
+                :code="code.value"
+                :lang="code.type"
               />
             </template>
 

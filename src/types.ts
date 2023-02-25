@@ -1,4 +1,4 @@
-export type TTestType = 'text' | 'checkbox' | 'radio' | 'separator' | 'code' | 'codepen'
+export type TTestType = 'text' | 'checkbox' | 'radio' | 'radio-code' | 'separator' | 'code' | 'codepen'
 export type TLink = {
   title: string
   link: string
@@ -23,12 +23,18 @@ export interface ITestBriefing {
   links: TLink[]
 }
 
+export interface ITestCode {
+  type: string
+  value: string
+}
+
 export interface ITestQuestion {
   type?: TTestType
   name?: string
   description?: string
   answer?: number
   codes?: TCodeSection
+  code?: ITestCode[]
   comment?: string
   options?: string[]
   figma?: string
