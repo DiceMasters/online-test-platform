@@ -18,5 +18,5 @@ export default defineConfig({
       }
     }
   },
-  base: '/<REPO>/'
+  base: '/online-test-platform/'
 })
